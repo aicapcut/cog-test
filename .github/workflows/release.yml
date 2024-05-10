@@ -11,11 +11,11 @@ jobs:
     name: Setup, Build, Publish & Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Free disk pace
-        uses: jlumbroso/free-disk-space@main
-        with:
-          tool-cache: false
-          docker-images: false
+      # - name: Free disk pace
+      #   uses: jlumbroso/free-disk-space@main
+      #   with:
+      #     tool-cache: false
+      #     docker-images: false
 
       - name: Checkout
         uses: actions/checkout@v4
