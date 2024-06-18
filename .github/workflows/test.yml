@@ -2,14 +2,11 @@ name: Push to Replicate
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   push_to_replicate:
     name: Push to Replicate
-    runs-on: ubuntu-latest-16-cores
+    runs-on: ubuntu-latest
     steps:
       - name: Free disk pace
         uses: jlumbroso/free-disk-space@v1.3.1
@@ -26,4 +23,4 @@ jobs:
           token: ${{ secrets.REPLICATE_API_TOKEN }}
 
       - name: Push to Replicate
-        run: cog push r8.im/aicapcut/sd3
+        run: cog push r8.im/aicapcut/nabla-theta-a5-v100
